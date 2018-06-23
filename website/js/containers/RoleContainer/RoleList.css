@@ -1,0 +1,148 @@
+.module_header {
+  height: 50px;
+  margin: 0 25px;
+  padding: 0;
+  border-bottom: 1px solid #f3f3f3;
+  position: relative;
+}
+
+.module_header .title {
+  line-height: 50px;
+  font-size: 18px;
+  float: left;
+}
+
+/*antd*/
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-input-wrapper,
+.editable_cell_text_wrapper {
+  padding-right: 24px;
+}
+
+.editable_cell_text_wrapper {
+  padding: 5px 24px 5px 5px;
+}
+
+.editable_cell_icon,
+.editable_cell_icon_check {
+  position: absolute;
+  right: 0;
+  width: 20px;
+  cursor: pointer;
+}
+
+.editable_cell_icon {
+  line-height: 18px;
+  display: none;
+}
+
+.editable_cell_icon_check {
+  line-height: 28px;
+}
+
+.editable-cell:hover .editable_cell_icon {
+  display: inline-block;
+}
+
+.editable_add_btn:hover,
+.editable_cell_icon:hover,
+.editable_cell_icon_check:hover {
+  color:#2db7f5;
+  border-color:#2db7f5 ;
+}
+
+.editable_add_btn {
+  margin-top: 15px;
+  border: 1px solid #f3f3f3;
+  width:50px;
+  height:30px;
+  background:none;
+  text-align: center;
+  border-radius: 5px;
+  /*background:#4bbcb7*/
+}
+.module_content{
+  /*margin: 50px  25px;*/
+  margin: 10px 25px;
+}
+
+.delete{
+  width:100px;
+  height:100px;
+  float:right;
+  background:#2db7f5;
+  border:1px solid #f3f3f3;
+}
+
+/*
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate;
+    text-align: left;
+    overflow: hidden;
+}*/
+
+
+/*主题内容
+ ScenarioMaintenanceList
+*/
+.container-table {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container-table td {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.table-bordered {
+  border: 1px solid #ddd;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+table {
+  border-spacing: 0;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+thead {
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
+}
+th{
+  vertical-align: bottom;
+  border-bottom-width: 2px;
+}
+
+.columns{
+  padding: 5px 24px 5px 5px;
+  width:1%
+}
+.SearchStyle{
+  width:200px;
+  margin-top:20px
+}
+.music_store_style{
+  margin-top: 15px;
+  margin-left:15px;
+  text-align:center;
+  border: 1px solid #f3f3f3;
+  width:50px;
+  height:30px;
+  background:none;
+  border-radius: 5px;
+}

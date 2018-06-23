@@ -1,0 +1,44 @@
+.body_div{
+    margin:10px 25px;
+    width:80%;
+    text-align: center;
+}
+
+.body_div .div_img{
+    text-align: center;
+    margin-top: 10px !important;
+}
+
+.module_header {
+    height: 40px;
+    margin: 25px;
+    padding: 0;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.icp-selector {
+    width: 60px;
+}
+
+.body_div .pic_area {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: 160px;
+    height: 160px;
+}
+
+.body_div .content_style{
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.body_div .div_button{
+    width: 30%;
+    background-color: #008AD4;
+    color: #ffffff;
+    font-size: 14px;
+    text-align: center;
+}

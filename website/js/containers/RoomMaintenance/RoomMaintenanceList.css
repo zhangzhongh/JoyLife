@@ -1,0 +1,92 @@
+/*header样式*/
+.module_header {
+    height: 50px;
+    margin: 0 25px;
+    padding: 0;
+    border-bottom: 1px solid #f3f3f3;
+    position: relative;
+}
+
+.module_header .title {
+    line-height: 50px;
+    font-size: 18px;
+    float: left;
+}
+
+.module_content{
+    overflow :auto;
+	height: 90%;
+	position: absolute;
+}
+
+/*table内编辑样式*/
+.editable-cell {
+  position: relative;
+}
+
+.editable-cell-input-wrapper,
+.editable-cell-text-wrapper {
+    padding-right: 24px;
+}
+
+.editable-cell-text-wrapper {
+    /*padding: 5px 24px 5px 5px;*/
+}
+
+.editable-cell-icon,
+.editable-cell-icon-check {
+    position: absolute;
+    right: 0;
+    width: 20px;
+    cursor: pointer;
+}
+
+.editable-cell-icon {
+    line-height: 18px;
+    display: none;
+}
+
+.editable-cell-icon-check {
+    line-height: 28px;
+    padding-top: 8px;
+}
+
+.editable-cell:hover .editable-cell-icon {
+    display: inline-block;
+}
+
+.editable-cell-icon:hover,
+.editable-cell-icon-check:hover {
+    color:#2db7f5;
+}
+
+.module_button{
+    padding-top:10px
+}
+.editable-add-btn {
+    line-height: 22px;
+    float:right;
+}
+
+.columns{
+    padding: 5px 24px 5px 5px;
+    width:30%
+}
+.scene-btn{
+    margin-left:20px
+}
+
+.backhover:hover{
+    color:#10aaf1;
+    cursor:pointer;
+}
+
+.module_But{
+    margin-bottom:10px;
+    margin-left:80%
+}
+
+.spin{
+    margin-top:40%;
+    text-align:center
+}

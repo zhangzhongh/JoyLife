@@ -1,0 +1,49 @@
+.module_menu {
+	color: #2e2e2e;
+	font-weight: 500;
+	font-size: 14px;
+}
+
+.header {
+    height: 50px;
+    font-size: 20px;
+}
+.header .title {
+    float: left;
+    margin: 0 15px;
+    font-size: 18px;
+    color: #333;
+    line-height: 50px;
+    font-weight: 500;
+}
+
+.section_header, .section_header_active {
+	position: relative;
+	margin-bottom: 2px;
+	padding: 15px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.section_header:hover, .section_header_active{
+	background: #dcdcdc;
+}
+
+.section_header .expand_icon {
+	display: inline-block;
+	width: 15px;
+	color: #8f8f8f;
+	vertical-align: middle;
+}
+
+.module_menu li {
+	padding: 13px 15px;
+}
+.module_menu li:hover,li.active {
+	background: #dcdcdc;
+	padding: 14px 15px;
+}
+
+.module_menu .title_panel {
+	margin-left: 18px;
+}

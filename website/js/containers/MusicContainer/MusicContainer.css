@@ -1,0 +1,35 @@
+a{
+    color:#40ada8;
+    font-family:'微软雅黑';
+    font-weight:400;
+
+}
+a:link,a:visited{
+    color:#40ada8;
+}
+a:hover{
+    color:#40ada8;
+    cursor:pointer;
+}
+.module_header {
+    height: 50px;
+    margin: 20px 0px 0 25px;
+    padding: 0;
+    border-bottom: 1px solid #f3f3f3;
+    position: relative;
+}
+
+.module_header .title {
+   /* line-height: 150px;*/
+    font-size: 16px;
+    float: left;
+}
+
+.module_content{
+    position: absolute;
+    top:60px;
+}
+.TBorderStyle{
+    padding:10px;
+    border: 1px solid #f3f3f3;
+}

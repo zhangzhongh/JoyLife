@@ -1,0 +1,57 @@
+.menu_nav li:hover, .menu_nav li.active {
+	background: #40ada8;
+}
+
+.menu_nav li.active {
+	display: block;
+	height: 60px;
+  padding: 0px;
+}
+
+.menu_nav li a {
+	display: block;
+	height: 60px;
+}
+
+.menu_nav li:hover .nav_tooltip {
+	display: inline-block;
+}
+
+.menu_nav li .nav_tooltip {
+	position: absolute;
+	top: 50%;
+	left: 70px;
+	z-index: 10;
+	display: none;
+	margin-top: -12px;
+	padding: 0 12px;
+	height: 30px;
+	border-radius: 3px;
+	background: #4bbcb7;
+	color: #a1fffb;
+	white-space: nowrap;
+	font-weight: 400;
+	font-size: 13px;
+	line-height: 30px;
+	-webkit-transition: display .5s;
+	transition: display .5s;
+}
+.menu_nav li .nav_tooltip:before {
+	position: absolute;
+	top: 50%;
+	left: -5px;
+	margin-top: -5px;
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-right: 5px solid #4bbcb7;
+	border-bottom: 4px solid transparent;
+	content: "";
+}
+
+.menu_nav .img {
+	width: 40px;
+	height: 40px;
+  margin:10px; 
+}
+
