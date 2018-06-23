@@ -1,0 +1,191 @@
+{
+  "name": "Music",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "String",
+      "required": false
+    },
+    "singer": {
+      "type": "String",
+      "required": false
+    },
+    "lyric": {
+      "type": "String",
+      "required": false
+    },
+    "describe": {
+      "type": "String",
+      "required": false
+    },
+    "type": {
+      "type": "String",
+      "required": false
+    },
+    "uploadDir": {
+      "type": "String",
+      "required": false
+    },
+    "soundImg": {
+      "type": "String",
+      "required": false
+    },
+    "createTime": {
+      "type": "String",
+      "required": false
+    },
+    "topOrNot": {
+      "type": "boolean",
+      "required": false
+    },
+    "duration": {
+      "type": "String",
+      "required": false
+    },
+    "auditStatus": {
+      "type": "String",
+      "required": false
+    },
+    "auditor": {
+      "type": "String",
+      "required": false
+    },
+    "auditTime": {
+      "type": "String",
+      "required": false
+    },
+    "uploader": {
+      "type": "String",
+      "required": false
+    },
+    "uploaderRole": {
+      "type": "String",
+      "required": false
+    },
+    "hitCount": {
+      "type": "Number",
+      "required": false
+    },
+    "downloadCount": {
+      "type": "Number",
+      "required": false
+    },
+    "checkDescribe": {
+      "type": "String",
+      "required": false
+    },
+    "sceneName": {
+      "type": "String",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Scenes": {
+      "type": "belongsTo",
+      "model": "Scene",
+      "foreignKey": "sceneId"
+    },
+    "registrator": {
+      "type": "belongsTo",
+      "model": "Registrator",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "searchData"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "uploader",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "clientUploader",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "setStickNew"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "setStickNew"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "topVerifier",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "clientUploader",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "CreateMusic"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "CreateMusic"
+    }
+  ],
+  "methods": {}
+}

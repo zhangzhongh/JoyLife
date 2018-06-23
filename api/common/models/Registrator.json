@@ -1,0 +1,115 @@
+{
+  "name": "Registrator",
+  "base": "User",
+  "idInjection": true,
+  "properties": {
+    "nickname": {
+      "type": "String",
+      "required": false,
+      "index":true
+    },
+    "gender": {
+      "type": "String",
+      "required": false,
+      "index":true
+    },
+    "age": {
+      "type": "Number",
+      "required": false
+    },
+    "hobby": {
+      "type": "String",
+      "required": false,
+      "index":true
+    },
+    "phone": {
+      "type": "String",
+      "required": false,
+      "index":true
+    },
+    "imgUrl": {
+      "type": "String",
+      "required": false,
+      "index":true
+    },
+    "role": {
+      "type": "String",
+      "required": false,
+      "index":true
+    },
+    "realm": {
+    "type": "String",
+    "required": false,
+    "index":true
+  },
+    "uploadAccount": {
+      "type": "Number",
+      "required": false,
+      "index":true
+    },
+    "focusPerson": {
+      "type": "String",
+      "required": false,
+      "index":true
+    },
+    "createTime": {
+      "type": "String",
+      "required": false,
+      "index":true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "music": {
+      "type": "hasMany",
+      "model": "Music",
+      "foreignKey": "userId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "resetPassword"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    }
+  ],
+  "methods": {}
+}

@@ -1,0 +1,108 @@
+{
+  "name": "Scene",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "SceneName": {
+      "type": "String",
+      "required": false
+    },
+    "createTime": {
+      "type": "String",
+      "required": false
+    },
+    "createPerson": {
+      "type": "String",
+      "required": false
+    },
+    "img": {
+      "type": "String",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "musics": {
+      "type": "hasMany",
+      "model": "Music",
+      "foreignKey": "sceneId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "create"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "upload"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "upload"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "uploader",
+      "permission": "ALLOW",
+      "property": "upload"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "clientUploader",
+      "permission": "ALLOW",
+      "property": "upload"
+    }
+  ],
+  "methods": {}
+}

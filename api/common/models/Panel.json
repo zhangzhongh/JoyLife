@@ -1,0 +1,72 @@
+{
+  "name": "Panel",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "String",
+      "required": true
+    },
+    "content": {
+      "type": "String",
+      "required": true
+    },
+    "imgUrl": {
+      "type": "String",
+      "required": true
+    },
+    "type": {
+      "type": "String",
+      "required": true
+    },
+    "url": {
+      "type": "String",
+      "required": true
+    },
+    "updatePerson": {
+      "type": "String",
+      "required": true
+    },
+    "updateTime": {
+      "type": "String",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "uploader",
+      "permission": "ALLOW",
+      "property": "updateAll"
+    }
+  ],
+  "methods": {}
+}

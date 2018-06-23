@@ -1,0 +1,22 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mysqldb": {
+    "host": "61.158.154.34",
+    "port": 9036,
+    "database": "yuemingpian",
+    "password": "123456",
+    "name": "mysqldb",
+    "connector": "mysql",
+    "insecureAuth": true,
+    "user": "root"
+  },
+  "storage": {
+    "name": "storage",
+    "connector": "loopback-component-storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  }
+}

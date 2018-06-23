@@ -1,0 +1,128 @@
+{
+  "name": "MusicOfRoom",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "String",
+      "required": false
+    },
+    "singer": {
+      "type": "String",
+      "required": false
+    },
+    "lyric": {
+      "type": "String",
+      "required": false
+    },
+    "describe": {
+      "type": "String",
+      "required": false
+    },
+    "type": {
+      "type": "String",
+      "required": false
+    },
+    "uploadDir": {
+      "type": "String",
+      "required": false
+    },
+    "soundImg": {
+      "type": "String",
+      "required": false
+    },
+    "createTime": {
+      "type": "String",
+      "required": false
+    },
+    "topOrNot": {
+      "type": "boolean",
+      "required": false
+    },
+    "duration": {
+      "type": "String",
+      "required": false
+    },
+    "auditStatus": {
+      "type": "String",
+      "required": false
+    },
+    "auditor": {
+      "type": "String",
+      "required": false
+    },
+    "auditTime": {
+      "type": "String",
+      "required": false
+    },
+    "uploader": {
+      "type": "String",
+      "required": false
+    },
+    "uploaderRole": {
+      "type": "String",
+      "required": false
+    },
+    "hitCount": {
+      "type": "Number",
+      "required": false
+    },
+    "downloadCount": {
+      "type": "Number",
+      "required": false
+    },
+    "sceneName": {
+      "type": "String",
+      "required": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "Scene": {
+      "type": "belongsTo",
+      "model": "SceneOfRoom",
+      "foreignKey": "sceneId"
+    }
+  },
+  "acls": [
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "DENY"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "accessType": "READ",
+      "permission": "ALLOW"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "MusicOfRoomUpdatemusic"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "manager",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "MusicOfRoomUpdatemusic"
+    },
+    {
+      "principalType": "ROLE",
+      "principalId": "admin",
+      "permission": "ALLOW",
+      "property": "deleteById"
+    }
+  ],
+  "methods": {}
+}
